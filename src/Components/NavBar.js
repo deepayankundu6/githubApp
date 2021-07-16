@@ -3,7 +3,7 @@ import React from "react"
 class NavBar extends React.Component {
     render() {
 
-        return <div class="Navbar" style={myStyles}> <i class="fab fa-github"></i> GitHub app.</div>
+        return <div class="Navbar" style={myStyles}> <i class="fab fa-github" ></i>  GitHubFinder</div>
     }
 }
 
