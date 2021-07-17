@@ -13,7 +13,6 @@ class Peoples extends Component {
     }
     componentDidMount() {
         axios.get('https://api.github.com/users').then(data => {
-            // this.UsersData = this.UsersData.concat(data.data);
             this.setState({
                 UsersData: data.data
             })
