@@ -4,20 +4,29 @@ import axios from 'axios';
 import * as Data from "../Data.json"
 
 class Peoples extends Component {
-    UsersData; Users;
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            UsersData: []
+        }
+    }
     componentDidMount() {
-        this.UsersData = this.getData().data;
+        axios.get('https://api.github.com/users').then(data => {
+            // this.UsersData = this.UsersData.concat(data.data);
+            this.setState({
+                UsersData: data.data
+            })
+
+        }).catch(err => {
+            console.log("Error occured while receiving data. ", err);
+        })
     }
 
     render() {
-        console.log(this.UsersData);
+        // console.log("Api data received:", this.state.UsersData);
         return <div><PeopleCards Users={Data} ></PeopleCards></div>
 
-    }
-
-    async getData() {
-
-        return await axios.get('https://api.github.com/users')
     }
 }
 export default Peoples;
