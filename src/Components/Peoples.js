@@ -1,7 +1,6 @@
 import { Component } from "react";
 import PeopleCards from "./PeopleCards";
 import axios from 'axios';
-import * as Data from "../Data.json"
 
 class Peoples extends Component {
     constructor(props) {
@@ -23,9 +22,7 @@ class Peoples extends Component {
     }
 
     render() {
-        // console.log("Api data received:", this.state.UsersData);
-        return <div><PeopleCards Users={Data} ></PeopleCards></div>
-
+        return <div><PeopleCards Users={this.state.UsersData} ></PeopleCards></div>
     }
 }
 export default Peoples;
