@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PeopleCards from "./PeopleCards";
 import axios from 'axios';
+import { findByLabelText } from "@testing-library/react";
 
 class Peoples extends Component {
     constructor(props) {
@@ -22,7 +23,9 @@ class Peoples extends Component {
     }
 
     render() {
-        return <div><PeopleCards Users={this.state.UsersData} ></PeopleCards></div>
+        return <div>
+            <PeopleCards Users={this.state.UsersData} ></PeopleCards>
+        </div>
     }
 }
 export default Peoples;

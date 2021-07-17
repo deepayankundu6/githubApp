@@ -14,7 +14,6 @@ const PeopleCards = (props) => {
     });
 }
 
-
 const myImageStyles = {
     borderRadius: '50%',
     width: '10rem'
