@@ -5,12 +5,12 @@ class NavBar extends Component {
     render() {
 
         return <Fragment>
-            <div className="Navbar" style={myStyles}> <i className="fab fa-github" ></i>  GitHubFinder
-                <ul style={containerStyle}>
-                    <li style={{ marginRight: '25px' }}> <Link to='/'>Home</Link></li>
-                    <li><Link to='/about'> About</Link></li>
-                </ul>
-            </div>
+            <div className="Navbar" style={myStyles}> <i className="fab fa-github" ></i>  GitHubFinder</div>
+            <ul style={containerStyle}>
+                <li style={{ marginRight: '25px' }}> <Link to='/'>Home</Link></li>
+                <li><Link to='/about'> About</Link></li>
+            </ul>
+
         </Fragment>
     }
 }

@@ -24,14 +24,21 @@ class Peoples extends Component {
     // }
 
     getUserData(userName) {
-        axios.get(`https://api.github.com/search/users?q=${userName}`).then(data => {
-            this.setState({
-                UsersData: data.data.items
-            })
 
-        }).catch(err => {
-            console.log("Error occured while receiving data. ", err);
-        })
+        if (userName.length == 0) {
+
+            alert("Please provide any user name");
+        }
+        else {
+            axios.get(`https://api.github.com/search/users?q=${userName}`).then(data => {
+                this.setState({
+                    UsersData: data.data.items
+                })
+
+            }).catch(err => {
+                console.log("Error occured while receiving data. ", err);
+            })
+        }
     }
     render() {
         return <div>

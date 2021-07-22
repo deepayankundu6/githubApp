@@ -12,7 +12,9 @@ class Search extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         this.props.getUserData(this.state.UserName);
-
+        this.setState({
+            UserName: ""
+        })
 
     }
 
@@ -30,7 +32,8 @@ class Search extends Component {
                     <input type="text" className="form-control" value={this.state.UserName} onChange={this.onChange} placeholder="User Name">
                     </input>
                 </div>
-                <button type="submit" className="btn btn-primary" value="Submit">Submit</button>
+                {!this.state.UserName.length ? "" : <button type="submit" className="btn btn-primary" value="Submit">Submit</button>
+                }
             </form>
         </Fragment>
     }
