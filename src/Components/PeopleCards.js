@@ -16,7 +16,8 @@ const PeopleCards = (props) => {
 
 const myImageStyles = {
     borderRadius: '50%',
-    width: '10rem'
+    width: '10rem',
+    margin: '10px'
 }
 
 let containerStyle = {
