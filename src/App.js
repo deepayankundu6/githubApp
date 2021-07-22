@@ -12,8 +12,8 @@ function App() {
       <NavBar></NavBar>
       <br></br>
       <Switch>
-        <Route path='/' Component={Peoples} />
-        <Route path='about' Component={About} />
+        <Route exact path='/' ><Peoples /></Route>
+        <Route path='/about' ><About /></Route>
       </Switch>
     </Router>
   );

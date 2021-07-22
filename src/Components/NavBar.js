@@ -8,7 +8,7 @@ class NavBar extends Component {
             <div className="Navbar" style={myStyles}> <i className="fab fa-github" ></i>  GitHubFinder
                 <ul>
                     <li> <Link to='/'>Home</Link></li>
-                    <li><Link to='about'> About</Link></li>
+                    <li><Link to='/about'> About</Link></li>
                 </ul>
 
             </div></Fragment>

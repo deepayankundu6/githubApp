@@ -2,7 +2,7 @@ import React from "react"
 
 const PeopleCards = (props) => {
     return props.Users.map((user) => {
-        return <div className="card" style={{ margin: '1%' }}>
+        return <div className="card" style={containerStyle}>
             <img className="card-img-top" style={myImageStyles} src={user.avatar_url} alt="User Image" />
             <div className="card-body">
                 <h5 className="card-title">{user.login}</h5>
@@ -17,5 +17,12 @@ const PeopleCards = (props) => {
 const myImageStyles = {
     borderRadius: '50%',
     width: '10rem'
+}
+
+let containerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    margin: '1%'
+
 }
 export default PeopleCards;
