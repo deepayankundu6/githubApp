@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PeopleCards from "./PeopleCards";
 import axios from 'axios';
+import Search from "./Search";
 
 class Peoples extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class Peoples extends Component {
 
     render() {
         return <div>
+            <Search></Search>
             <PeopleCards Users={this.state.UsersData} ></PeopleCards>
         </div>
     }

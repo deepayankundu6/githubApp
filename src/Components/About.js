@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 
 class About extends Component {
     render() {
@@ -15,6 +15,5 @@ class About extends Component {
 let containerStyle = {
     display: "flex",
     justifyContent: "center"
-
 }
 export default About;

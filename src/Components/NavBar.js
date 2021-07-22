@@ -6,12 +6,12 @@ class NavBar extends Component {
 
         return <Fragment>
             <div className="Navbar" style={myStyles}> <i className="fab fa-github" ></i>  GitHubFinder
-                <ul>
-                    <li> <Link to='/'>Home</Link></li>
+                <ul style={containerStyle}>
+                    <li style={{ marginRight: '25px' }}> <Link to='/'>Home</Link></li>
                     <li><Link to='/about'> About</Link></li>
                 </ul>
-
-            </div></Fragment>
+            </div>
+        </Fragment>
     }
 }
 
@@ -20,5 +20,9 @@ const myStyles = {
     color: "white",
     paddingBottom: "5px",
     paddingTop: "5px"
+}
+let containerStyle = {
+    display: "flex",
+    justifyContent: "center",
 }
 export default NavBar;
