@@ -13,7 +13,7 @@ class Peoples extends Component {
         this.getUserData = this.getUserData.bind(this);
     }
     // componentDidMount() {
-    //     axios.get('https://api.github.com/users').then(data => {
+    //     axios.get('https://api.github.com/users/${UserName').then(data => {
     //         this.setState({
     //             UsersData: data.data
     //         })
