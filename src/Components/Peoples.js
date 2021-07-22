@@ -22,6 +22,7 @@ class Peoples extends Component {
     //         console.log("Error occured while receiving data. ", err);
     //     })
     // }
+
     getUserData(userName) {
         axios.get(`https://api.github.com/search/users?q=${userName}`).then(data => {
             this.setState({
