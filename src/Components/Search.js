@@ -2,8 +2,8 @@ import React, { Component, Fragment } from "react"
 
 class Search extends Component {
 
-    constructor(prop) {
-        super(prop);
+    constructor(props) {
+        super(props);
         this.state = {
             UserName: ''
         }
