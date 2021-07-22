@@ -1,16 +1,36 @@
 import React, { Component, Fragment } from "react"
 
 class Search extends Component {
-    render() {
 
+    constructor(prop) {
+        super(prop);
+        this.state = {
+            UserName: ''
+        }
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.props.getUserData(this.state.UserName);
+
+
+    }
+
+    onChange = (e) => {
+        this.setState({
+            UserName: e.target.value
+        })
+    }
+
+    render() {
         return <Fragment>
-            <form>
+            <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                     <label >Search</label>
-                    <input type="email" className="form-control" placeholder="User Name">
+                    <input type="text" className="form-control" value={this.state.UserName} onChange={this.onChange} placeholder="User Name">
                     </input>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" value="Submit">Submit</button>
             </form>
         </Fragment>
     }
