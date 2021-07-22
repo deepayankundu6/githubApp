@@ -1,7 +1,6 @@
 import { Component } from "react";
 import PeopleCards from "./PeopleCards";
 import axios from 'axios';
-import { findByLabelText } from "@testing-library/react";
 
 class Peoples extends Component {
     constructor(props) {

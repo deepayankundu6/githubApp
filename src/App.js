@@ -2,14 +2,20 @@ import './App.css';
 import React from 'react';
 import NavBar from './Components/NavBar';
 import Peoples from './Components/Peoples';
+import About from './Components/About'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 
   return (
-    <div><NavBar></NavBar>
+    <Router>
+      <NavBar></NavBar>
       <br></br>
-      <Peoples />
-    </div>
+      <Switch>
+        <Route path='/' Component={Peoples} />
+        <Route path='about' Component={About} />
+      </Switch>
+    </Router>
   );
 }
 

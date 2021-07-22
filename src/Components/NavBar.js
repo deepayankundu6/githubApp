@@ -1,9 +1,17 @@
-import React from "react"
+import React, { Component, Fragment } from "react"
+import { Link } from 'react-router-dom';
 
-class NavBar extends React.Component {
+class NavBar extends Component {
     render() {
 
-        return <div class="Navbar" style={myStyles}> <i class="fab fa-github" ></i>  GitHubFinder</div>
+        return <Fragment>
+            <div className="Navbar" style={myStyles}> <i className="fab fa-github" ></i>  GitHubFinder
+                <ul>
+                    <li> <Link to='/'>Home</Link></li>
+                    <li><Link to='about'> About</Link></li>
+                </ul>
+
+            </div></Fragment>
     }
 }
 
