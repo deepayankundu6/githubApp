@@ -13,16 +13,7 @@ class Peoples extends Component {
         this.getUserData = this.getUserData.bind(this);
         this.showClearButton = true;
     }
-    // componentDidMount() {
-    //     axios.get('https://api.github.com/users/${UserName}').then(data => {
-    //         this.setState({
-    //             UsersData: data.data
-    //         })
 
-    //     }).catch(err => {
-    //         console.log("Error occured while receiving data. ", err);
-    //     })
-    // }
 
     getUserData(userName) {
 
