@@ -35,11 +35,11 @@ class Search extends Component {
                     <input type="text" className="form-control" value={this.state.UserName} onChange={this.onChange} placeholder="User Name">
                     </input>
                 </div>
-                {!this.state.UserName.length ? "" : <button type="submit" className="btn btn-primary" value="Submit">Submit</button>
+                {!this.state.UserName.length ? "" : <button type="submit" style={clearButtonStyle} className="btn btn-primary" value="Submit">Submit</button>
                 }
 
             </form>
-            {this.props.usersCount === 0 ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
+            {!this.props.Users.length ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
             }
         </Fragment>
     }
