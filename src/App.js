@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import InvalidRoute from './Components/InvalidRout';
 import UserView from './Components/UserView';
 
-function App() {
+function App(props) {
 
   return (
     <Router>
