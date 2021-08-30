@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react"
 
 class Search extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -24,6 +23,10 @@ class Search extends Component {
         })
     }
 
+    onClearClick = () => {
+        this.props.clearUserData();
+    }
+
     render() {
         return <Fragment>
             <form onSubmit={this.onSubmit}>
@@ -34,9 +37,17 @@ class Search extends Component {
                 </div>
                 {!this.state.UserName.length ? "" : <button type="submit" className="btn btn-primary" value="Submit">Submit</button>
                 }
+
             </form>
+            {this.props.usersCount === 0 ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
+            }
         </Fragment>
     }
+}
+
+const clearButtonStyle = {
+
+    marginLeft: '1%'
 }
 
 export default Search;

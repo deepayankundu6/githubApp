@@ -1,6 +1,8 @@
 import React from "react"
+import { useHistory } from 'react-router-dom';
 
 const PeopleCards = (props) => {
+    const history = useHistory();
     return <div>
         {props.Users.map((user) => {
             return <div className="card" style={containerStyle}>
@@ -8,7 +10,7 @@ const PeopleCards = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{user.login}</h5>
                     {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                    <a href={user.html_url} className="btn btn-primary">Profile Link</a>
+                    <button onClick={() => history.push(`/details/${user.id}`)} className="btn btn-primary">Profile Link</button>
                 </div>
                 <br></br>
             </div>
