@@ -28,7 +28,7 @@ class Search extends Component {
     }
 
     render() {
-        return <Fragment>
+        return <div style={CenterAlign}>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                     &nbsp;  <label>Search</label>
@@ -41,7 +41,7 @@ class Search extends Component {
                 }
             </form>
 
-        </Fragment>
+        </div>
     }
 }
 
@@ -53,4 +53,11 @@ const clearButtonStyle = {
 const searchButtonStyle = {
     width: '51%'
 }
+
+let CenterAlign = {
+    margin: 'auto',
+    width: '90%'
+}
+
+
 export default Search;

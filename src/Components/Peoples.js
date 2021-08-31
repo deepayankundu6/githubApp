@@ -46,4 +46,5 @@ class Peoples extends Component {
     }
 
 }
+
 export default Peoples;

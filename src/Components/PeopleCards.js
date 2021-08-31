@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 const PeopleCards = (props) => {
     const history = useHistory();
-    return <div>
+    return <div style={CenterAlign}>
         {props.Users.map((user) => {
             return <div className="card" style={containerStyle}>
                 <img className="card-img-top" style={myImageStyles} src={user.avatar_url} alt="User Image" />
@@ -22,14 +22,23 @@ const PeopleCards = (props) => {
 
 const myImageStyles = {
     borderRadius: '50%',
-    width: '10rem',
-    margin: '10px'
+    width: '5rem',
+    margin: 'auto',
+    marginTop: '1%'
 }
 
 let containerStyle = {
     display: "flex",
     justifyContent: "center",
-    margin: '1%',
-    width: '50%'
+    margin: 'auto',
+    width: '50%',
+    textAlign: 'center',
+    marginBottom: '1%',
+    marginTop: '1%'
+}
+
+let CenterAlign = {
+    margin: 'auto',
+    width: '90%'
 }
 export default PeopleCards;

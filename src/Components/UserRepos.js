@@ -13,8 +13,7 @@ function UserRepos() {
             console.log("Error occured while receiving data. ", err);
         })
     }, [])
-    console.log("UserReposList:", userRepos);
-    return <div>
+    return <div style={CenterAlign}>
         &nbsp;<i className="fas fa-chevron-square-left" onClick={() => history.goBack()} ></i>
         {userRepos.map((repo) => {
             return <div className="card" style={containerStyle}>
@@ -35,6 +34,11 @@ let containerStyle = {
     justifyContent: "center",
     margin: '1%',
     width: '50%'
+}
+
+let CenterAlign = {
+    margin: 'auto',
+    width: '60%'
 }
 
 export default UserRepos;
