@@ -31,11 +31,11 @@ class Search extends Component {
         return <Fragment>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label >Search</label>
-                    <input type="text" className="form-control" value={this.state.UserName} onChange={this.onChange} placeholder="User Name">
+                    &nbsp;  <label>Search</label>
+                    &nbsp;  <input type="text" style={searchButtonStyle} className="form-control" value={this.state.UserName} onChange={this.onChange} placeholder="User Name">
                     </input>
                 </div>
-                {!this.state.UserName.length ? "" : <button type="submit" style={clearButtonStyle} className="btn btn-primary" value="Submit">Submit</button>
+                &nbsp; {!this.state.UserName.length ? "" : <button type="submit" style={clearButtonStyle} className="btn btn-primary" value="Submit">Submit</button>
                 }
                 {!this.props.Users.length ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
                 }
@@ -50,4 +50,7 @@ const clearButtonStyle = {
     marginLeft: '1%'
 }
 
+const searchButtonStyle = {
+    width: '51%'
+}
 export default Search;

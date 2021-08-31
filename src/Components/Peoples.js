@@ -22,9 +22,9 @@ class Peoples extends Component {
             alert("Please provide any user name");
         }
         else {
-            axios.get(`https://api.github.com/search/users?q=${userName}`).then(data => {
+            axios.get(`https://api.github.com/search/users?q=${userName}`).then(response => {
                 this.setState({
-                    UsersData: data.data.items
+                    UsersData: response.data.items
                 });
 
             }).catch(err => {
