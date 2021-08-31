@@ -37,10 +37,10 @@ class Search extends Component {
                 </div>
                 {!this.state.UserName.length ? "" : <button type="submit" style={clearButtonStyle} className="btn btn-primary" value="Submit">Submit</button>
                 }
-
+                {!this.props.Users.length ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
+                }
             </form>
-            {!this.props.Users.length ? "" : <button className="btn btn-danger" style={clearButtonStyle} onClick={this.onClearClick}>Clear</button>
-            }
+
         </Fragment>
     }
 }
