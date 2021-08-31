@@ -14,7 +14,7 @@ function UserRepos() {
     }, [])
     console.log("UserReposList:", userRepos);
     return <div>
-        {userRepos.map((repo) => {
+        {userRepos.forEach((repo) => {
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">{repo.name}</h5>

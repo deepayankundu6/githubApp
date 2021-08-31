@@ -1,9 +1,8 @@
 import { React, useEffect, useState } from "react"
 import { useParams, useHistory } from "react-router-dom";
 import axios from 'axios';
-import UserRepos from "./UserRepos";
 
-function UserView(props) {
+function UserView() {
     const history = useHistory();
     const [userProfile, setUserProfile] = useState(Object);
     let { id } = useParams();
@@ -24,7 +23,7 @@ function UserView(props) {
             <div className="card-header">
             </div>
             <div className="card-body" >
-                <img src={userProfile.avatar_url} style={myImageStyles}></img>
+                <img src={userProfile.avatar_url} style={myImageStyles} alt="User profile picture"></img>
                 <h5 className="card-title">{userProfile.login}</h5>
                 <p className="card-text">{userProfile.bio ? userProfile.bio : " No Bio Available!!! "}</p>
                 <p className="card-text">  <i className="fas fa-map-marker-alt"></i> {userProfile.location ? userProfile.location : "NA"}</p>
