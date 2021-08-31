@@ -31,6 +31,5 @@ let containerStyle = {
     display: "flex",
     justifyContent: "center",
     margin: '1%'
-
 }
 export default PeopleCards;
